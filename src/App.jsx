@@ -1,41 +1,36 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import PostList from './pages/PostList';
-import PostSingle from './pages/PostSingle';
-import PageView from './pages/PageView';
-import ShowcaseGallery from './showcases/ShowcaseGallery';
-import ShowcaseView from './showcases/ShowcaseView';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import DashboardPage from './pages/DashboardPage';
+import MembershipPage from './pages/MembershipPage';
+import AnnouncementsPage from './pages/AnnouncementsPage';
+import DiagramsPage from './pages/DiagramsPage';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   return (
-    <>
-      <header className="site-header">
-        <div className="container header-inner">
-          <Link to="/" className="logo">Devonshire</Link>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/showcases">Showcases</Link>
-          </nav>
-        </div>
-      </header>
-
-      <main className="container">
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <ScrollToTop />
+      <Navbar />
+      <main className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<PostList />} />
-          <Route path="/blog/:slug" element={<PostSingle />} />
-          <Route path="/page/:slug" element={<PageView />} />
-          <Route path="/showcases" element={<ShowcaseGallery />} />
-          <Route path="/showcases/:id" element={<ShowcaseView />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/membership" element={<MembershipPage />} />
+          <Route path="/announcements" element={<AnnouncementsPage />} />
+          <Route path="/diagrams" element={<DiagramsPage />} />
         </Routes>
       </main>
-
-      <footer className="site-footer">
-        <div className="container">
-          <p>&copy; {new Date().getFullYear()} Devonshire. Built with React + Vite.</p>
-        </div>
-      </footer>
-    </>
+      <Footer />
+    </div>
   );
 }
