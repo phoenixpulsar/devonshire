@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "slug": "getting-started-with-headless-wordpress",
+    "date": "2025-12-01T10:00:00",
+    "title": {
+      "rendered": "Getting Started with Headless WordPress"
+    },
+    "excerpt": {
+      "rendered": "<p>Learn how to decouple WordPress from its frontend and use it as a headless CMS with a modern React application.</p>"
+    },
+    "content": {
+      "rendered": "<h2>Why Headless?</h2><p>Headless WordPress separates the content management backend from the presentation layer. This gives you full control over the frontend while keeping WordPress as your content engine.</p><h2>How It Works</h2><p>WordPress exposes a REST API at <code>/wp-json/wp/v2</code>. Your React app fetches content from these endpoints and renders it however you like.</p><p>This approach lets you use modern tooling like Vite, React Router, and CSS custom properties while your editors keep the familiar WordPress dashboard.</p>"
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://placehold.co/800x400/0057b7/ffffff?text=Headless+WP"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "designing-responsive-card-layouts",
+    "date": "2025-12-15T14:30:00",
+    "title": {
+      "rendered": "Designing Responsive Card Layouts"
+    },
+    "excerpt": {
+      "rendered": "<p>Explore CSS Grid techniques for building flexible card layouts that adapt beautifully across all screen sizes.</p>"
+    },
+    "content": {
+      "rendered": "<h2>CSS Grid for Cards</h2><p>CSS Grid's <code>auto-fill</code> and <code>minmax()</code> functions make it easy to create responsive card grids without media queries.</p><p>Use <code>grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))</code> for a fluid layout that automatically adjusts the number of columns based on available space.</p><p>Combine this with a consistent gap and you have a clean, maintainable card grid.</p>"
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://placehold.co/800x400/2d8659/ffffff?text=Card+Layouts"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "slug": "ux-patterns-for-modern-websites",
+    "date": "2026-01-05T09:00:00",
+    "title": {
+      "rendered": "UX Patterns for Modern Websites"
+    },
+    "excerpt": {
+      "rendered": "<p>A curated collection of UX patterns that improve usability and delight users on modern web applications.</p>"
+    },
+    "content": {
+      "rendered": "<h2>Patterns That Work</h2><p>Good UX isn't about flashy animations — it's about reducing friction. Patterns like split heroes, progressive disclosure, and contextual navigation help users find what they need quickly.</p><p>In this post, we explore several patterns you can implement today to improve your site's usability.</p><h2>The Showcase Approach</h2><p>Building a gallery of reusable UX components lets your team experiment and iterate rapidly. Each pattern lives in isolation, making it easy to test and refine.</p>"
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://placehold.co/800x400/8b5cf6/ffffff?text=UX+Patterns"
+        }
+      ]
+    }
+  }
+]
