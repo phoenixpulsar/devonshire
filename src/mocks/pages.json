@@ -1,0 +1,38 @@
+[
+  {
+    "id": 10,
+    "slug": "about",
+    "date": "2025-11-01T08:00:00",
+    "title": {
+      "rendered": "About"
+    },
+    "content": {
+      "rendered": "<h2>About Devonshire</h2><p>Devonshire is a minimal React + Vite frontend designed for prototyping UX patterns and integrating with headless WordPress.</p><p>It provides a showcase system where developers and designers can build, preview, and iterate on UI components in isolation. When you're ready, connect it to a live WordPress instance to pull real content.</p><h3>Goals</h3><ul><li>Keep the stack minimal — no heavy frameworks or CSS libraries</li><li>Support rapid prototyping with mock data</li><li>Demonstrate clean integration with the WordPress REST API</li></ul>"
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://placehold.co/800x400/374151/ffffff?text=About"
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "slug": "contact",
+    "date": "2025-11-01T08:00:00",
+    "title": {
+      "rendered": "Contact"
+    },
+    "content": {
+      "rendered": "<h2>Get In Touch</h2><p>Have questions about Devonshire or want to contribute? We'd love to hear from you.</p><p>Email: <a href=\"mailto:hello@example.com\">hello@example.com</a></p><p>GitHub: <a href=\"https://github.com/phoenixpulsar/devonshire\">phoenixpulsar/devonshire</a></p>"
+    },
+    "_embedded": {
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://placehold.co/800x400/374151/ffffff?text=Contact"
+        }
+      ]
+    }
+  }
+]
