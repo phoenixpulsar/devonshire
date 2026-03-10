@@ -7,7 +7,6 @@ import {
   Megaphone,
   Heart,
   HandHelping,
-  TreePine,
 } from 'lucide-react';
 import AnnouncementCard from '../components/AnnouncementCard';
 import EventCard from '../components/EventCard';
