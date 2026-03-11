@@ -4,12 +4,17 @@ import AnnouncementCard from '../components/AnnouncementCard';
 import { announcements } from '../data/mockData';
 import { useTheme } from '../context/ThemeContext';
 import { themes } from '../themes';
+import V6Announcements from '../variants/v6/V6Announcements';
+import V7Announcements from '../variants/v7/V7Announcements';
 
 const categories = ['All', 'Event', 'Safety', 'News', 'Meeting'];
 
 export default function AnnouncementsPage() {
   const { activeVariant } = useTheme();
   const t = themes[activeVariant];
+
+  if (activeVariant === 6) return <V6Announcements />;
+  if (activeVariant === 7) return <V7Announcements />;
 
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');

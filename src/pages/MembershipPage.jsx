@@ -23,12 +23,17 @@ import {
   getTabStyles,
   getDonationBtnStyles,
 } from '../themes';
+import V6Membership from '../variants/v6/V6Membership';
+import V7Membership from '../variants/v7/V7Membership';
 
 const donationAmounts = [25, 50, 100, 250];
 
 export default function MembershipPage() {
   const { activeVariant } = useTheme();
   const t = themes[activeVariant];
+
+  if (activeVariant === 6) return <V6Membership />;
+  if (activeVariant === 7) return <V7Membership />;
 
   const [activeTab, setActiveTab] = useState('dues');
   const [selectedDonation, setSelectedDonation] = useState(50);

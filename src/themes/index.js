@@ -475,6 +475,188 @@ export const themes = {
     panelBorder: 'border border-white/10',
     panelHeaderBorder: 'border-b border-white/10',
   },
+
+  // ────────────────────────────────────────────
+  // OPTION 6 — Command Center
+  // ────────────────────────────────────────────
+  6: {
+    name: 'Command Center',
+    pageBg: 'bg-gray-100',
+    pageText: 'text-gray-900',
+
+    navbarBg: 'bg-slate-900 border-b border-slate-800',
+    navbarLogoBg: 'bg-teal-500',
+    navbarLogoText: 'text-white',
+    navbarSubtext: 'text-slate-500',
+    navbarLink: 'text-slate-400 hover:text-white hover:bg-slate-800',
+    navbarLinkActive: 'text-teal-400 bg-teal-500/10',
+    navbarCta: 'text-white bg-teal-500 hover:bg-teal-600',
+    navbarMobileBg: 'bg-slate-900 border-t border-slate-800',
+    navbarToggle: 'text-slate-300 hover:bg-slate-800',
+
+    footerBg: 'bg-slate-900',
+    footerText: 'text-slate-400',
+    footerHeading: 'text-white',
+    footerMuted: 'text-slate-500',
+    footerLink: 'text-slate-500 hover:text-teal-400',
+    footerBorder: 'border-slate-800',
+    footerCopy: 'text-slate-600',
+
+    cardBg: 'bg-white',
+    cardBorder: 'border border-gray-200/60',
+    cardHover: 'hover:shadow-md hover:border-teal-200/50',
+    cardRadius: 'rounded-xl',
+
+    headingColor: 'text-gray-900',
+    bodyColor: 'text-gray-600',
+    mutedColor: 'text-gray-500',
+    subtleColor: 'text-gray-400',
+
+    accentColor: 'text-teal-600',
+    accentHover: 'hover:text-teal-700',
+    accentBg: 'bg-teal-50',
+    accentBgHover: 'hover:bg-teal-50',
+    accentBorder: 'border-teal-200',
+    accentRing: 'focus:ring-teal-500',
+
+    btnPrimary: 'text-white bg-teal-600 hover:bg-teal-700 shadow-sm',
+    btnSecondary: 'text-gray-700 bg-white hover:bg-gray-50 border border-gray-200',
+    btnOutline: 'text-teal-600 border border-teal-200 hover:bg-teal-50',
+
+    heroBg: 'bg-gray-100',
+    heroOverlay: '',
+    heroBadgeBg: 'bg-teal-100 text-teal-700',
+    heroAccentText: 'text-teal-600',
+
+    statCardBg: 'bg-white border border-gray-200/60',
+
+    sectionAltBg: 'bg-gray-50 border-y border-gray-200/60',
+    ctaBg: 'bg-teal-600',
+    ctaText: 'text-white',
+    ctaSubtext: 'text-teal-100',
+    ctaBtnPrimary: 'text-teal-700 bg-white hover:bg-teal-50',
+
+    dashboardHeaderBg: 'bg-white border-b border-gray-200/60',
+
+    tableBg: 'bg-white',
+    tableBorder: 'border border-gray-200/60',
+    tableHeaderBg: 'bg-gray-50',
+    tableHeaderText: 'text-gray-500',
+    tableRowHover: 'hover:bg-teal-50/30',
+    tableRowBorder: 'divide-y divide-gray-100',
+    tableCellText: 'text-gray-600',
+    tableCellBold: 'text-gray-900',
+
+    inputBg: 'bg-white',
+    inputBorder: 'border-gray-200',
+    inputText: 'text-gray-900',
+    inputPlaceholder: 'placeholder:text-gray-400',
+    inputFocus: 'focus:ring-2 focus:ring-teal-500 focus:border-transparent',
+
+    badgeActiveBg: 'bg-teal-50 text-teal-700 ring-1 ring-inset ring-teal-600/20',
+
+    filterActive: 'bg-teal-50 text-teal-700',
+    filterInactive: 'text-gray-500 hover:text-gray-700 hover:bg-gray-100',
+
+    involveBg: 'bg-white border border-gray-200/60 hover:shadow-md hover:border-teal-200/50',
+
+    transition: 'transition-all duration-200',
+
+    panelBg: 'bg-white',
+    panelBorder: 'border border-gray-200/60',
+    panelHeaderBorder: 'border-b border-gray-100',
+  },
+
+  // ────────────────────────────────────────────
+  // OPTION 7 — Community Feed
+  // ────────────────────────────────────────────
+  7: {
+    name: 'Community Feed',
+    pageBg: 'bg-orange-50/30',
+    pageText: 'text-gray-900',
+
+    navbarBg: 'bg-white/80 backdrop-blur-lg border-b border-rose-100/50',
+    navbarLogoBg: 'bg-gradient-to-br from-rose-500 to-pink-500',
+    navbarLogoText: 'text-gray-900',
+    navbarSubtext: 'text-rose-300',
+    navbarLink: 'text-gray-500 hover:text-rose-600 hover:bg-rose-50',
+    navbarLinkActive: 'text-rose-600 bg-rose-50',
+    navbarCta: 'text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600',
+    navbarMobileBg: 'bg-white border-t border-rose-100',
+    navbarToggle: 'text-gray-500 hover:bg-rose-50',
+
+    footerBg: 'bg-gray-900',
+    footerText: 'text-gray-400',
+    footerHeading: 'text-rose-300',
+    footerMuted: 'text-gray-500',
+    footerLink: 'text-gray-500 hover:text-rose-300',
+    footerBorder: 'border-gray-800',
+    footerCopy: 'text-gray-600',
+
+    cardBg: 'bg-white',
+    cardBorder: 'border border-rose-100/50 shadow-sm shadow-rose-100/30',
+    cardHover: 'hover:shadow-lg hover:shadow-rose-200/30 hover:-translate-y-0.5',
+    cardRadius: 'rounded-2xl',
+
+    headingColor: 'text-gray-900',
+    bodyColor: 'text-gray-600',
+    mutedColor: 'text-gray-500',
+    subtleColor: 'text-gray-400',
+
+    accentColor: 'text-rose-500',
+    accentHover: 'hover:text-rose-600',
+    accentBg: 'bg-rose-50',
+    accentBgHover: 'hover:bg-rose-50',
+    accentBorder: 'border-rose-200',
+    accentRing: 'focus:ring-rose-500',
+
+    btnPrimary: 'text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 shadow-md shadow-rose-200/50',
+    btnSecondary: 'text-gray-700 bg-white hover:bg-rose-50 border border-rose-200 shadow-sm',
+    btnOutline: 'text-rose-500 border border-rose-200 hover:bg-rose-50',
+
+    heroBg: 'bg-gradient-to-br from-rose-50 via-white to-pink-50',
+    heroOverlay: 'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-rose-100/30 via-transparent to-transparent',
+    heroBadgeBg: 'bg-rose-100/60 text-rose-600',
+    heroAccentText: 'text-rose-500',
+
+    statCardBg: 'bg-white border border-rose-100/50 shadow-sm shadow-rose-100/30',
+
+    sectionAltBg: 'bg-rose-50/30 border-y border-rose-100/40',
+    ctaBg: 'bg-gradient-to-r from-rose-500 to-pink-500',
+    ctaText: 'text-white',
+    ctaSubtext: 'text-rose-100',
+    ctaBtnPrimary: 'text-rose-600 bg-white hover:bg-rose-50 shadow-md',
+
+    dashboardHeaderBg: 'bg-white/80 backdrop-blur-sm border-b border-rose-100/50',
+
+    tableBg: 'bg-white',
+    tableBorder: 'border border-rose-100/50 shadow-sm',
+    tableHeaderBg: 'bg-rose-50/30',
+    tableHeaderText: 'text-gray-500',
+    tableRowHover: 'hover:bg-rose-50/30',
+    tableRowBorder: 'divide-y divide-rose-100/50',
+    tableCellText: 'text-gray-600',
+    tableCellBold: 'text-gray-900',
+
+    inputBg: 'bg-white',
+    inputBorder: 'border-rose-200',
+    inputText: 'text-gray-900',
+    inputPlaceholder: 'placeholder:text-rose-300',
+    inputFocus: 'focus:ring-2 focus:ring-rose-500 focus:border-transparent',
+
+    badgeActiveBg: 'bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-600/20',
+
+    filterActive: 'bg-rose-100 text-rose-700',
+    filterInactive: 'text-gray-500 hover:text-gray-700 hover:bg-rose-50',
+
+    involveBg: 'bg-white border border-rose-100/50 shadow-sm hover:shadow-lg hover:-translate-y-0.5',
+
+    transition: 'transition-all duration-300',
+
+    panelBg: 'bg-white',
+    panelBorder: 'border border-rose-100/50 shadow-sm',
+    panelHeaderBorder: 'border-b border-rose-100/50',
+  },
 };
 
 /**
@@ -512,6 +694,24 @@ export function getStatIconStyles(variant, color) {
     const map = {
       emerald: 'bg-emerald-50 text-emerald-600',
       blue: 'bg-indigo-50 text-indigo-600',
+      amber: 'bg-amber-50 text-amber-600',
+      purple: 'bg-purple-50 text-purple-600',
+    };
+    return map[color] || map.emerald;
+  }
+  if (variant === 6) {
+    const map = {
+      emerald: 'bg-teal-50 text-teal-600',
+      blue: 'bg-blue-50 text-blue-600',
+      amber: 'bg-amber-50 text-amber-600',
+      purple: 'bg-purple-50 text-purple-600',
+    };
+    return map[color] || map.emerald;
+  }
+  if (variant === 7) {
+    const map = {
+      emerald: 'bg-rose-50 text-rose-600',
+      blue: 'bg-blue-50 text-blue-600',
       amber: 'bg-amber-50 text-amber-600',
       purple: 'bg-purple-50 text-purple-600',
     };
@@ -567,6 +767,24 @@ export function getCategoryStyles(variant, category) {
     };
     return map[category] || 'bg-stone-50 text-stone-700 ring-stone-600/20';
   }
+  if (variant === 6) {
+    const map = {
+      Event: 'bg-blue-50 text-blue-700 ring-blue-600/20',
+      Safety: 'bg-amber-50 text-amber-700 ring-amber-600/20',
+      News: 'bg-teal-50 text-teal-700 ring-teal-600/20',
+      Meeting: 'bg-rose-50 text-rose-700 ring-rose-600/20',
+    };
+    return map[category] || 'bg-gray-50 text-gray-700 ring-gray-600/20';
+  }
+  if (variant === 7) {
+    const map = {
+      Event: 'bg-blue-50 text-blue-700 ring-blue-600/20',
+      Safety: 'bg-amber-50 text-amber-700 ring-amber-600/20',
+      News: 'bg-rose-50 text-rose-700 ring-rose-600/20',
+      Meeting: 'bg-pink-50 text-pink-700 ring-pink-600/20',
+    };
+    return map[category] || 'bg-gray-50 text-gray-700 ring-gray-600/20';
+  }
   // Default (variant 1)
   const map = {
     Event: 'bg-blue-50 text-blue-700 ring-blue-600/20',
@@ -613,6 +831,22 @@ export function getInvolveIconBg(variant, color) {
     };
     return map[color] || map.emerald;
   }
+  if (variant === 6) {
+    const map = {
+      emerald: 'bg-teal-50',
+      blue: 'bg-blue-50',
+      amber: 'bg-amber-50',
+    };
+    return map[color] || map.emerald;
+  }
+  if (variant === 7) {
+    const map = {
+      emerald: 'bg-rose-50',
+      blue: 'bg-blue-50',
+      amber: 'bg-amber-50',
+    };
+    return map[color] || map.emerald;
+  }
   const map = {
     emerald: 'bg-emerald-50',
     blue: 'bg-blue-50',
@@ -644,6 +878,22 @@ export function getInvolveIconColor(variant, color) {
   if (variant === 4) {
     const map = {
       emerald: 'text-amber-600',
+      blue: 'text-blue-600',
+      amber: 'text-amber-600',
+    };
+    return map[color] || map.emerald;
+  }
+  if (variant === 6) {
+    const map = {
+      emerald: 'text-teal-600',
+      blue: 'text-blue-600',
+      amber: 'text-amber-600',
+    };
+    return map[color] || map.emerald;
+  }
+  if (variant === 7) {
+    const map = {
+      emerald: 'text-rose-600',
       blue: 'text-blue-600',
       amber: 'text-amber-600',
     };
@@ -687,6 +937,20 @@ export function getEventDateBadge(variant) {
       bg: 'bg-violet-500/10 border border-violet-500/20',
       month: 'text-violet-400',
       day: 'text-violet-300',
+    };
+  }
+  if (variant === 6) {
+    return {
+      bg: 'bg-teal-50 border border-teal-100',
+      month: 'text-teal-600',
+      day: 'text-teal-700',
+    };
+  }
+  if (variant === 7) {
+    return {
+      bg: 'bg-rose-50 border border-rose-100',
+      month: 'text-rose-600',
+      day: 'text-rose-700',
     };
   }
   return {
@@ -737,6 +1001,8 @@ export function getDuesHighlight(variant) {
   if (variant === 3) return 'bg-indigo-50';
   if (variant === 4) return 'bg-gradient-to-r from-amber-50 to-amber-100/50';
   if (variant === 5) return 'bg-violet-500/10 backdrop-blur-sm';
+  if (variant === 6) return 'bg-teal-50';
+  if (variant === 7) return 'bg-rose-50';
   return 'bg-emerald-50';
 }
 
@@ -748,6 +1014,8 @@ export function getDuesPriceColor(variant) {
   if (variant === 3) return 'text-indigo-600';
   if (variant === 4) return 'text-amber-600';
   if (variant === 5) return 'text-violet-400';
+  if (variant === 6) return 'text-teal-600';
+  if (variant === 7) return 'text-rose-600';
   return 'text-emerald-700';
 }
 
@@ -759,6 +1027,8 @@ export function getDuesSupportIcon(variant) {
   if (variant === 3) return 'text-indigo-500';
   if (variant === 4) return 'text-amber-500';
   if (variant === 5) return 'text-violet-400';
+  if (variant === 6) return 'text-teal-500';
+  if (variant === 7) return 'text-rose-500';
   return 'text-emerald-500';
 }
 
@@ -771,6 +1041,8 @@ export function getTabStyles(variant, isActive) {
     if (variant === 3) return { text: 'text-indigo-600', bar: 'bg-indigo-600' };
     if (variant === 4) return { text: 'text-amber-600', bar: 'bg-amber-600' };
     if (variant === 5) return { text: 'text-violet-400', bar: 'bg-gradient-to-r from-violet-500 to-fuchsia-500' };
+    if (variant === 6) return { text: 'text-teal-700', bar: 'bg-teal-600' };
+    if (variant === 7) return { text: 'text-rose-600', bar: 'bg-rose-500' };
     return { text: 'text-emerald-700', bar: 'bg-emerald-600' };
   }
   if (variant === 2) return { text: 'text-gray-500 hover:text-gray-300', bar: '' };
@@ -788,6 +1060,8 @@ export function getDonationBtnStyles(variant, isSelected) {
     if (variant === 3) return 'bg-indigo-50 text-indigo-600 border-indigo-200';
     if (variant === 4) return 'bg-amber-50 text-amber-700 border-amber-200';
     if (variant === 5) return 'bg-violet-500/10 text-violet-300 border-violet-500/20';
+    if (variant === 6) return 'bg-teal-50 text-teal-700 border-teal-200';
+    if (variant === 7) return 'bg-rose-50 text-rose-700 border-rose-200';
     return 'bg-emerald-50 text-emerald-700 border-emerald-200';
   }
   if (variant === 2) return 'bg-gray-800 text-gray-300 border-gray-700 hover:border-gray-600';
@@ -803,6 +1077,8 @@ export function getReceiptLinkColor(variant) {
   if (variant === 3) return 'text-indigo-600 hover:text-indigo-700';
   if (variant === 4) return 'text-amber-600 hover:text-amber-700';
   if (variant === 5) return 'text-violet-400 hover:text-violet-300';
+  if (variant === 6) return 'text-teal-600 hover:text-teal-700';
+  if (variant === 7) return 'text-rose-500 hover:text-rose-600';
   return 'text-emerald-600 hover:text-emerald-700';
 }
 
@@ -814,6 +1090,8 @@ export function getQuickActionHover(variant) {
   if (variant === 3) return 'hover:bg-indigo-50 hover:text-indigo-600';
   if (variant === 4) return 'hover:bg-amber-50 hover:text-amber-700';
   if (variant === 5) return 'hover:bg-violet-500/10 hover:text-violet-300';
+  if (variant === 6) return 'hover:bg-teal-50 hover:text-teal-700';
+  if (variant === 7) return 'hover:bg-rose-50 hover:text-rose-600';
   return 'hover:bg-emerald-50 hover:text-emerald-700';
 }
 
@@ -825,6 +1103,8 @@ export function getMembershipCheckBg(variant) {
   if (variant === 3) return 'bg-indigo-50';
   if (variant === 4) return 'bg-amber-50';
   if (variant === 5) return 'bg-violet-500/10';
+  if (variant === 6) return 'bg-teal-50';
+  if (variant === 7) return 'bg-rose-50';
   return 'bg-emerald-50';
 }
 
@@ -836,5 +1116,7 @@ export function getMembershipCheckColor(variant) {
   if (variant === 3) return 'text-indigo-600';
   if (variant === 4) return 'text-amber-600';
   if (variant === 5) return 'text-violet-400';
+  if (variant === 6) return 'text-teal-600';
+  if (variant === 7) return 'text-rose-600';
   return 'text-emerald-600';
 }
