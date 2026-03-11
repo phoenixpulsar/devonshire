@@ -14,10 +14,15 @@ import StatCard from '../components/StatCard';
 import { announcements, events, communityStats } from '../data/mockData';
 import { useTheme } from '../context/ThemeContext';
 import { themes, getInvolveIconBg, getInvolveIconColor } from '../themes';
+import V6Home from '../variants/v6/V6Home';
+import V7Home from '../variants/v7/V7Home';
 
 export default function HomePage() {
   const { activeVariant } = useTheme();
   const t = themes[activeVariant];
+
+  if (activeVariant === 6) return <V6Home />;
+  if (activeVariant === 7) return <V7Home />;
 
   const latestAnnouncements = announcements.slice(0, 3);
   const upcomingEvents = events.slice(0, 3);

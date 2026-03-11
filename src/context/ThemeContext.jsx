@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useCallback } from 'react';
 
 const ThemeContext = createContext(null);
 
-export const VARIANTS = [1, 2, 3, 4, 5];
+export const VARIANTS = [1, 2, 3, 4, 5, 6, 7];
 
 export const VARIANT_LABELS = {
   1: 'Option 1',
@@ -10,6 +10,8 @@ export const VARIANT_LABELS = {
   3: 'Option 3',
   4: 'Option 4',
   5: 'Option 5',
+  6: 'Option 6',
+  7: 'Option 7',
 };
 
 export const VARIANT_DESCRIPTIONS = {
@@ -18,6 +20,8 @@ export const VARIANT_DESCRIPTIONS = {
   3: 'Fresh Alternative',
   4: 'Bold Premium',
   5: 'Artistic Vision',
+  6: 'Command Center',
+  7: 'Community Feed',
 };
 
 export function ThemeProvider({ children }) {

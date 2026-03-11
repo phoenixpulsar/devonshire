@@ -15,10 +15,15 @@ import PaymentHistoryTable from '../components/PaymentHistoryTable';
 import { memberProfile, announcements, paymentHistory } from '../data/mockData';
 import { useTheme } from '../context/ThemeContext';
 import { themes, getMembershipCheckBg, getMembershipCheckColor, getQuickActionHover } from '../themes';
+import V6Dashboard from '../variants/v6/V6Dashboard';
+import V7Dashboard from '../variants/v7/V7Dashboard';
 
 export default function DashboardPage() {
   const { activeVariant } = useTheme();
   const t = themes[activeVariant];
+
+  if (activeVariant === 6) return <V6Dashboard />;
+  if (activeVariant === 7) return <V7Dashboard />;
 
   const recentAnnouncements = announcements.slice(0, 3);
   const recentPayments = paymentHistory.slice(0, 3);
