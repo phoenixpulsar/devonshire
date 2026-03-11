@@ -12,12 +12,11 @@ const categories = ['All', 'Event', 'Safety', 'News', 'Meeting'];
 export default function AnnouncementsPage() {
   const { activeVariant } = useTheme();
   const t = themes[activeVariant];
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   if (activeVariant === 6) return <V6Announcements />;
   if (activeVariant === 7) return <V7Announcements />;
-
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
 
   const filteredAnnouncements = announcements.filter((a) => {
     const matchesCategory = activeCategory === 'All' || a.category === activeCategory;

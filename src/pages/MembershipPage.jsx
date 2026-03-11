@@ -31,13 +31,12 @@ const donationAmounts = [25, 50, 100, 250];
 export default function MembershipPage() {
   const { activeVariant } = useTheme();
   const t = themes[activeVariant];
-
-  if (activeVariant === 6) return <V6Membership />;
-  if (activeVariant === 7) return <V7Membership />;
-
   const [activeTab, setActiveTab] = useState('dues');
   const [selectedDonation, setSelectedDonation] = useState(50);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+
+  if (activeVariant === 6) return <V6Membership />;
+  if (activeVariant === 7) return <V7Membership />;
 
   const validUntilFormatted = new Date(
     memberProfile.membership.validUntil,
