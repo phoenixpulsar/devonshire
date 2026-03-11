@@ -12,42 +12,47 @@ import AnnouncementCard from '../components/AnnouncementCard';
 import EventCard from '../components/EventCard';
 import StatCard from '../components/StatCard';
 import { announcements, events, communityStats } from '../data/mockData';
+import { useTheme } from '../context/ThemeContext';
+import { themes, getInvolveIconBg, getInvolveIconColor } from '../themes';
 
 export default function HomePage() {
+  const { activeVariant } = useTheme();
+  const t = themes[activeVariant];
+
   const latestAnnouncements = announcements.slice(0, 3);
   const upcomingEvents = events.slice(0, 3);
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-100/40 via-transparent to-transparent" />
+      <section className={`relative overflow-hidden ${t.heroBg} transition-colors duration-500`}>
+        <div className={`absolute inset-0 ${t.heroOverlay}`} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100/60 text-emerald-700 text-sm font-medium mb-6">
+            <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full ${t.heroBadgeBg} text-sm font-medium mb-6 transition-colors duration-500`}>
               <Shield className="w-4 h-4" />
               Serving our community since 1975
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-tight">
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold ${activeVariant === 4 ? 'text-white' : t.headingColor} tracking-tight leading-tight transition-colors duration-500`}>
               Devonshire
               <br />
-              <span className="text-emerald-600">Neighborhood Association</span>
+              <span className={`${t.heroAccentText} transition-colors duration-500`}>Neighborhood Association</span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl">
+            <p className={`mt-6 text-lg sm:text-xl ${activeVariant === 4 ? 'text-stone-300' : t.bodyColor} leading-relaxed max-w-2xl transition-colors duration-500`}>
               Supporting community safety, connection, and neighborhood improvement.
               Stay informed, get involved, and help make Devonshire a great place to live.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Link
                 to="/membership"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm shadow-emerald-200 transition-all"
+                className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold ${t.btnPrimary} transition-all duration-300`}
               >
                 Join the Neighborhood
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/membership"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-200 transition-all"
+                className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold ${activeVariant === 4 ? t.btnOutline : t.btnSecondary} transition-all duration-300`}
               >
                 Pay Annual Dues
               </Link>
@@ -75,12 +80,12 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Latest Announcements</h2>
-            <p className="mt-2 text-gray-500">Stay up to date with what is happening in Devonshire.</p>
+            <h2 className={`text-2xl sm:text-3xl font-bold ${t.headingColor} transition-colors duration-500`}>Latest Announcements</h2>
+            <p className={`mt-2 ${t.mutedColor} transition-colors duration-500`}>Stay up to date with what is happening in Devonshire.</p>
           </div>
           <Link
             to="/announcements"
-            className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
+            className={`hidden sm:inline-flex items-center gap-1 text-sm font-semibold ${t.accentColor} ${t.accentHover} transition-colors`}
           >
             View all
             <ArrowRight className="w-4 h-4" />
@@ -94,7 +99,7 @@ export default function HomePage() {
         <div className="mt-6 sm:hidden">
           <Link
             to="/announcements"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 hover:text-emerald-700"
+            className={`inline-flex items-center gap-1 text-sm font-semibold ${t.accentColor} ${t.accentHover}`}
           >
             View all announcements
             <ArrowRight className="w-4 h-4" />
@@ -103,12 +108,12 @@ export default function HomePage() {
       </section>
 
       {/* Events Section */}
-      <section className="bg-gray-50/70 border-y border-gray-100">
+      <section className={`${t.sectionAltBg} transition-colors duration-500`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="flex items-end justify-between mb-8">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Upcoming Events</h2>
-              <p className="mt-2 text-gray-500">Mark your calendar and join your neighbors.</p>
+              <h2 className={`text-2xl sm:text-3xl font-bold ${t.headingColor} transition-colors duration-500`}>Upcoming Events</h2>
+              <p className={`mt-2 ${t.mutedColor} transition-colors duration-500`}>Mark your calendar and join your neighbors.</p>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -122,60 +127,48 @@ export default function HomePage() {
       {/* Community Participation */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Get Involved</h2>
-          <p className="mt-2 text-gray-500 max-w-xl mx-auto">
+          <h2 className={`text-2xl sm:text-3xl font-bold ${t.headingColor} transition-colors duration-500`}>Get Involved</h2>
+          <p className={`mt-2 ${t.mutedColor} max-w-xl mx-auto transition-colors duration-500`}>
             A strong neighborhood starts with participation. Here is how you can help.
           </p>
         </div>
         <div className="grid sm:grid-cols-3 gap-6">
-          <div className="text-center p-6 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-all">
-            <div className="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mx-auto mb-4">
-              <HandHelping className="w-6 h-6 text-emerald-600" />
+          {[
+            { icon: HandHelping, color: 'emerald', title: 'Volunteer', desc: 'Join clean-up days, help with events, or support neighborhood beautification projects.' },
+            { icon: Users, color: 'blue', title: 'Attend Meetings', desc: 'Your voice matters. Attend board meetings and help shape the future of Devonshire.' },
+            { icon: Shield, color: 'amber', title: 'Patrol Support', desc: 'Support our security patrol program by volunteering or contributing to patrol funding.' },
+          ].map((item) => (
+            <div key={item.title} className={`text-center p-6 ${t.cardRadius} ${t.involveBg} ${t.transition}`}>
+              <div className={`w-12 h-12 rounded-xl ${getInvolveIconBg(activeVariant, item.color)} flex items-center justify-center mx-auto mb-4 transition-colors duration-500`}>
+                <item.icon className={`w-6 h-6 ${getInvolveIconColor(activeVariant, item.color)} transition-colors duration-500`} />
+              </div>
+              <h3 className={`text-lg font-semibold ${t.headingColor} mb-2 transition-colors duration-500`}>{item.title}</h3>
+              <p className={`text-sm ${t.mutedColor} leading-relaxed transition-colors duration-500`}>
+                {item.desc}
+              </p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Volunteer</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              Join clean-up days, help with events, or support neighborhood beautification projects.
-            </p>
-          </div>
-          <div className="text-center p-6 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-all">
-            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mx-auto mb-4">
-              <Users className="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Attend Meetings</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              Your voice matters. Attend board meetings and help shape the future of Devonshire.
-            </p>
-          </div>
-          <div className="text-center p-6 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-all">
-            <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-6 h-6 text-amber-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Patrol Support</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              Support our security patrol program by volunteering or contributing to patrol funding.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-emerald-600">
+      <section className={`${t.ctaBg} transition-colors duration-500`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">Ready to join your neighbors?</h2>
-          <p className="mt-3 text-emerald-100 text-lg max-w-xl mx-auto">
+          <h2 className={`text-2xl sm:text-3xl font-bold ${t.ctaText} transition-colors duration-500`}>Ready to join your neighbors?</h2>
+          <p className={`mt-3 ${t.ctaSubtext} text-lg max-w-xl mx-auto transition-colors duration-500`}>
             Membership supports security, events, and improvements that benefit every household.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               to="/membership"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-emerald-700 bg-white hover:bg-emerald-50 transition-all"
+              className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold ${t.ctaBtnPrimary} transition-all duration-300`}
             >
               Become a Member
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               to="/announcements"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold text-white border border-white/30 hover:bg-white/10 transition-all"
+              className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold ${t.btnOutline} transition-all duration-300`}
             >
               View Announcements
             </Link>

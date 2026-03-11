@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
 import AnnouncementCard from '../components/AnnouncementCard';
-import CategoryBadge from '../components/CategoryBadge';
 import { announcements } from '../data/mockData';
+import { useTheme } from '../context/ThemeContext';
+import { themes } from '../themes';
 
 const categories = ['All', 'Event', 'Safety', 'News', 'Meeting'];
 
 export default function AnnouncementsPage() {
+  const { activeVariant } = useTheme();
+  const t = themes[activeVariant];
+
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -20,12 +24,12 @@ export default function AnnouncementsPage() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-50/50">
+    <div className={`min-h-screen ${t.pageBg} transition-colors duration-500`}>
       {/* Header */}
-      <div className="bg-white border-b border-gray-100">
+      <div className={`${t.dashboardHeaderBg} transition-colors duration-500`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Announcements</h1>
-          <p className="mt-2 text-gray-500">
+          <h1 className={`text-2xl sm:text-3xl font-bold ${t.headingColor} transition-colors duration-500`}>Announcements</h1>
+          <p className={`mt-2 ${t.mutedColor} transition-colors duration-500`}>
             Stay informed about neighborhood news, events, safety updates, and meetings.
           </p>
         </div>
@@ -36,13 +40,13 @@ export default function AnnouncementsPage() {
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           {/* Search */}
           <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className={`absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 ${t.subtleColor}`} />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search announcements..."
-              className="w-full pl-9 pr-4 py-2.5 rounded-lg border border-gray-200 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent placeholder:text-gray-400"
+              className={`w-full pl-9 pr-4 py-2.5 rounded-lg border ${t.inputBg} ${t.inputBorder} ${t.inputText} text-sm focus:outline-none ${t.inputFocus} ${t.inputPlaceholder} transition-colors duration-500`}
             />
           </div>
 
@@ -52,10 +56,10 @@ export default function AnnouncementsPage() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
+                className={`px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-300 ${
                   activeCategory === cat
-                    ? 'bg-emerald-50 text-emerald-700'
-                    : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100'
+                    ? t.filterActive
+                    : t.filterInactive
                 }`}
               >
                 {cat}
@@ -65,7 +69,7 @@ export default function AnnouncementsPage() {
         </div>
 
         {/* Results count */}
-        <p className="text-sm text-gray-400 mb-4">
+        <p className={`text-sm ${t.subtleColor} mb-4 transition-colors duration-500`}>
           {filteredAnnouncements.length} announcement{filteredAnnouncements.length !== 1 ? 's' : ''}
         </p>
 
@@ -80,9 +84,9 @@ export default function AnnouncementsPage() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <Filter className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">No announcements found</h3>
-            <p className="text-sm text-gray-500">
+            <Filter className={`w-12 h-12 ${t.subtleColor} mx-auto mb-4`} />
+            <h3 className={`text-lg font-semibold ${t.headingColor} mb-1 transition-colors duration-500`}>No announcements found</h3>
+            <p className={`text-sm ${t.mutedColor} transition-colors duration-500`}>
               Try adjusting your search or filter to find what you are looking for.
             </p>
           </div>
